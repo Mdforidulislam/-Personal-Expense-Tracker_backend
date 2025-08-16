@@ -7,7 +7,6 @@
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "npm run generate && tsc",
     "generate": "npx prisma generate",
-    "postinstall": "npm run generate",
     "cModule": "node scripts/generateModule.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

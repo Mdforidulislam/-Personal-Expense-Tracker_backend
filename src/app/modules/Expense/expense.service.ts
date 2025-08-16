@@ -13,7 +13,7 @@ import httpStatus from "http-status";
 import ApiError from "../../../errors/ApiErrors";
 import { Prisma } from "@prisma/client";
 
-// ✅ Small reusable helper to enforce ownership checks
+// Using Dry priciple Small reusable helper to enforce ownership checks
 const assertOwnership = async (id: string, userId: string) => {
   const expense = await prisma.expense.findUnique({ where: { id } });
   if (!expense) {
